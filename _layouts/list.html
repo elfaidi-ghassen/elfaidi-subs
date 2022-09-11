@@ -14,9 +14,9 @@ layout: list
 
   <nav class="container">
     <ul>
-      <a href="{% link index.html %}"><li>الصفحة الرئيسيّة</li></a>
+      <a href={{ "index.html" | relative_url }}><li>الصفحة الرئيسيّة</li></a>
       <a href="#" class="active"><li>قائمة الترجمات</li></a>
-      <a href="{% link about.html %}"><li>حول الموقع</li></a>
+      <a href={{ "about.html" | relative_url }}><li>حول الموقع</li></a>
 
     </ul>
   </nav>

@@ -2,9 +2,9 @@
   <ul>
     <a href="#"><li class="active">{{ page.title }}</li></a>
 
-    <a href="{% link subs-list.html %}"><li>قائمة الترجمات</li></a>
+    <a href={{ "subs-list.html" | relative_url }}><li>قائمة الترجمات</li></a>
 
-    <a href="{% link about.html %}"><li>حول الموقع</li></a>
+    <a href={{ "about.html" | relative_url }}><li>حول الموقع</li></a>
   </ul>
 </nav>
 <div class="nav-hr"></div>

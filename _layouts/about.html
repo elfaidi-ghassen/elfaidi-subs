@@ -14,8 +14,8 @@ layout: about
 
   <nav class="container">
     <ul>
-      <a href="{% link index.html %}"><li>الصفحة الرئيسيّة</li></a>
-      <a href="{% link subs-list.html %}"><li>قائمة الترجمات</li></a>
+      <a href={{ "index.html" | relative_url }}><li>الصفحة الرئيسيّة</li></a>
+      <a href={{ "subs-list.html" | relative_url }}><li>قائمة الترجمات</li></a>
       <a href=""><li class="active">{{ page.title }}</li></a>
     </ul>
   </nav>
@@ -29,5 +29,5 @@ layout: about
 
   {% include footer.html %}
 
-  <script src="../assets/javascript/set-copyright-year.js"></script>
+  <script src={{ "assets/javascript/set-copyright-year.js" | relative_url }}></script>
 </body>

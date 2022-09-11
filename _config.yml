@@ -5,3 +5,6 @@ author: Ghassen
 
 url: https://elfaidi-ghassen.github.io
 baseurl: /elfaidi-subs
+
+# include:
+#   - _assets

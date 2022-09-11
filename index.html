@@ -7,16 +7,16 @@ layout: home
 <div
 	class="post most-recent container"
 	style="cursor: pointer"
-	onclick="window.location='{{ post.url }}'"
+	onclick="window.location='{{ post.url | relative_url }}'"
 >
-	<a href="{{ post.url }}">
+	<a href="{{ post.url | relative_url }}">
 		<div class="post-img" style="background-image: url('{{ post.image }}');">
 			<img src="{{ post.image }}" alt="" />
 		</div>
 	</a>
 
 	<div class="post-info">
-		<h2><a href="{{ post.url }}">{{ post.title }}</a></h2>
+		<h2><a href={{ post.url | relative_url }}>{{ post.title }}</a></h2>
 		<span class="description">{{ post.excerpt }}</span>
 		<div class="date">
 			<p>{{ post.date | date: "%m/%d/%Y" }}</p>
@@ -39,13 +39,13 @@ layout: home
     >
     <!-- background-image: url("../images/treasure-island.jpg"); -->
       <div class="post-img">
-        <a href="{{ post.url }}">
+        <a href={{ post.url | relative_url }}>
           <img src="{{ post.image }}" alt="" />
         </a>
       </div>
 
       <div class="post-info">
-        <h2><a href="{{ post.url }}">{{ post.title }}</a></h2>
+        <h2><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h2>
         <span class="description">{{ post.excerpt }}</span>
         <div class="date">
           <p>{{ post.date | date: "%m/%d/%Y" }}</p>
@@ -57,7 +57,7 @@ layout: home
   </ul>
 
   <div class="btn-show-all">
-    <a href="{% link subs-list.html %}">اعرض الكلّ</a>
+    <a href={{ "subs-list.html" | relative_url }}>اعرض الكلّ</a>
     <i class="fa-solid fa-greater-than"></i>
   </div>
 
