@@ -1,0 +1,50 @@
+---
+title: قائمة الترجمات
+layout: list
+---
+
+<div class="all-older container">
+  <ul class="older ">
+    <h2>
+      <!-- <i class="fa-solid fa-clock-rotate-left"></i> -->
+      القائمة
+    </h2>
+    <!-- <li
+      class="post older-posts "
+      style="cursor: pointer"
+      onclick="window.location='{{ post.url }}'"
+      > -->
+      <!-- <div class="post-img">
+        <a href="{{ post.url }}">
+          <img src="{{ post.image }}" alt="" />
+        </a>
+      </div> -->
+      <table>
+        <thead>
+          <th>
+            الاسم
+          </th>
+          <th>
+            يوم النشر
+          </th>
+          <th>
+            الصنف
+          </th>
+        </thead>
+        <tbody>
+          {% for post in site.posts %}
+          <tr>
+            <td class="title"><a href="{{ post.url }}">{{ post.title }}</a></td>
+            <td>{{ post.date | date: "%m/%d/%Y" }}</td>
+            <td><span class="type {{ post.type-eng }}">{{ post.type }}</span></td>
+          </tr>
+
+          {% endfor %}
+        </tbody>
+      </table>
+
+
+
+  </ul>
+
+</div>

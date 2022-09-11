@@ -1,0 +1,27 @@
+---
+layout: home
+---
+<!DOCTYPE html>
+<html dir="rtl" lang="ar">
+<head>
+  {% include metadata.html %}
+  <link rel="stylesheet" href={{ "assets/css/main.css" | relative_url }}>
+  <link rel="stylesheet" href={{ "assets/css/normalize.css" | relative_url }}>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+</head>
+<body>
+  {% include header.html %}
+
+  {% include nav.html %}
+
+  <main>
+    {{ content }}
+  </main>
+
+  {% include footer.html %}
+
+  <script src="assets/javascript/date-format.js"></script>
+  <script src="assets/javascript/set-copyright-year.js"></script>
+  <script src="assets/javascript/main.js"></script>
+</body>
+</html>
