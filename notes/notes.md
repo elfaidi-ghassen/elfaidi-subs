@@ -5,3 +5,5 @@
 
 
 # what's index.md for?
+
+# bundle exec jekyll serve --livereload

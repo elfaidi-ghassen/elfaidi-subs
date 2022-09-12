@@ -1,4 +1,4 @@
-let dates = document.querySelectorAll(".date p")
+let dates = document.querySelectorAll(".date")
 
 dates.forEach(date => {
   date.textContent = format(date.textContent)

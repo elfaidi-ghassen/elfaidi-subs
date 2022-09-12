@@ -35,7 +35,7 @@ layout: list
           {% for post in site.posts %}
           <tr>
             <td class="title"><a href={{ post.url | relative_url }}>{{ post.title }}</a></td>
-            <td>{{ post.date | date: "%m/%d/%Y" }}</td>
+            <td class="date">{{ post.date | date: "%m/%d/%Y" }}</td>
             <td><span class="type {{ post.type-eng }}">{{ post.type }}</span></td>
           </tr>
 

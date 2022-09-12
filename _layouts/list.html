@@ -8,6 +8,10 @@ layout: list
   <link rel="stylesheet" href={{ "assets/css/normalize.css" | relative_url }}>
   <link rel="stylesheet" href={{ "assets/css/list.css" | relative_url }}>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+  <title>القائمة</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@300;400;500;700&display=swap" rel="stylesheet">
 </head>
 <body>
   {% include header.html %}
@@ -28,7 +32,7 @@ layout: list
 
   {% include footer.html %}
 
-  <!-- <script src="assets/javascript/date-format.js"></script> -->
-  <script src="assets/javascript/set-copyright-year.js"></script>
-  <script src="assets/javascript/main.js"></script>
+  <script src={{ "assets/javascript/date-format.js" | relative_url }}></script>
+  <!-- <script src="assets/javascript/set-copyright-year.js"></script> -->
+  <!-- <script src="assets/javascript/main.js"></script> -->
 </body>
