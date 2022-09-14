@@ -4,25 +4,19 @@ layout: home
 ---
 
 {% assign post = site.posts.first %}
-<div
-	class="post most-recent container"
-	style="cursor: pointer"
-	onclick="window.location='{{ post.url | relative_url }}'"
->
-	<a href="{{ post.url | relative_url }}">
-		<div class="post-img" style="background-image: url('{{ post.image }}');">
-			<img src="{{ post.image }}" alt="" />
-		</div>
-	</a>
+<div class="post most-recent container"
+  onclick="window.location='{{ post.url | relative_url }}'">
+  <a href="{{ post.url | relative_url }}">
+    <div class="post-img" style="background-image: url('{{ post.image }}');">
+      <img src="{{ post.image }}" alt="" />
+    </div>
+  </a>
 
-	<div class="post-info">
-		<h2><a href={{ post.url | relative_url }}>{{ post.title }}</a></h2>
-		<span class="description">{{ post.excerpt }}</span>
-		<div class="date">
-			<p>{{ post.date | date: "%m/%d/%Y" }}</p>
-		</div>
+  <div class="post-info">
+    <h2><a href={{ post.url | relative_url }}>{{ post.title }}</a></h2>
+    <span class="description">{{ post.excerpt }}</span>
     <p class="type {{ post.type-eng }}">{{ post.type }}</p>
-	</div>
+  </div>
 </div>
 
 <div class="all-older container">
@@ -32,12 +26,7 @@ layout: home
       الأقدم
     </h2>
     {% for post in site.posts offset:1 limit:2 %}
-    <li
-      class="post older-posts "
-      style="cursor: pointer"
-      onclick="window.location='{{ post.url }}'"
-    >
-    <!-- background-image: url("../images/treasure-island.jpg"); -->
+    <li class="post older-posts " style="cursor: pointer" onclick="window.location='{{ post.url | relative_url }}'">
       <div class="post-img">
         <a href={{ post.url | relative_url }}>
           <img src="{{ post.image }}" alt="" />

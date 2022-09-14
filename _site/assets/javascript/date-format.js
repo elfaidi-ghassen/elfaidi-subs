@@ -9,7 +9,6 @@ function format(date) {
   const monthNames = ["جانفي", "فيفري", "مارس", "أفريل", "ماس", "جوان",
   "جويلية", "أوت", "سبتمبر", "أوكتوبر", "نوفمبر", "ديسمبر"
 ];
-  // let [d, m, y] = date.split("-")
   let thisYear = new Date().getFullYear()
   let dateObj = new Date(Date.parse(date))
   let fMonth = monthNames[dateObj.getMonth()]

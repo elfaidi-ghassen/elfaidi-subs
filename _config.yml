@@ -1,10 +1,8 @@
-# jekyll serve --livereload
+# bundle exec jekyll serve --livereload
 
 name: Elfaidi
 author: Ghassen
+twitter: "https://twitter.com/FeidiHc"
 
 url: https://elfaidi-ghassen.github.io
 baseurl: /elfaidi-subs
-
-# include:
-#   - _assets
