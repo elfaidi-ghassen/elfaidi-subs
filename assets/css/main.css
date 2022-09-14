@@ -91,6 +91,8 @@ header {
   header .heading {
     position: absolute;
     right: 80px;
+    top: 50%;
+    transform: translateY(-50%);
   }
   header {
     padding: 5px 15px;
