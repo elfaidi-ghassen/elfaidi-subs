@@ -15,6 +15,10 @@ body {
 
 }
 
+::selection {
+  background-color: #8991d949;
+}
+
 @media (max-width:480px) {
   body {
     font-size: 18px;
@@ -44,6 +48,8 @@ body {
   width: 45px;
   height: 45px;
   cursor: pointer;
+  display: flex;
+  align-items: center;
 }
 @media (max-width:800px) {
   .logo {
@@ -63,6 +69,7 @@ header .heading {
   font-size: 30px;
   color: #8991d9;
   user-select: none;
+  cursor: pointer;
 }
 
 
@@ -84,15 +91,23 @@ header {
   justify-content: space-between;
   align-items: center;
   padding: 10px 30px;
-  border-bottom: 2px solid #EEE;
+  border-bottom: 1px solid #ededed;
 }
+@media (max-width:480px) {
+  header:not(.post-class header) {
+    border-bottom: none;
+  }
+}
+
+
 
 @media (max-width:480px) {
   header .heading {
     position: absolute;
-    right: 80px;
-    transform: translateY(-50%);
-    top: 50%;
+    right: 60px;
+    height: 100%;
+    display: flex;
+    align-items: center;
   }
   header {
     padding: 5px 15px;
@@ -107,11 +122,18 @@ nav ul li {
   position: relative;
   cursor: pointer;
   text-align: center;
+  font-weight: 500;
+  font-size: 20px;
 }
 
-nav ul li:hover {
-  background-color: #f5f5f5;
+
+
+@media (min-width:480px) {
+  nav ul li:hover {
+    background-color: #f5f5f5;
+  }
 }
+
 
 nav ul {
   display: flex;
@@ -132,15 +154,20 @@ nav ul {
   }
 }
 
+@media (max-width:480px) {
+  nav ul a {
+    -webkit-tap-highlight-color: transparent;
+  }
+}
 
-.nav-hr {
-  border-bottom: 2px solid #EEE;
 
+nav .active {
+  text-shadow:0px 0px 1px black;
 }
 
 nav .active::after {
   content: "";
-  height: 0.16em;
+  height: 3px;
   background-color: var(--text);
   width: 60%;
   position: absolute;
@@ -160,10 +187,10 @@ h2 {
 }
 
 .description .hide {
-  color: #4a4a4a;
-  margin-top: 15px;
-  margin-bottom: 6px;
-  /* max-width: 100%; */
+  color: #2a2a2a;
+  margin-top: 10px;
+  margin-bottom: 16px;
+  line-height: 1.4;
 }
 .post.most-recent img {
   width: 450px;
@@ -186,6 +213,12 @@ h2 {
   /* justify-content: space-between; */
   padding-top: 40px;
   padding-bottom: 40px;
+  cursor: pointer;
+}
+
+
+.post.most-recent .post-img {
+  background-size: cover;
 }
 
 @media (max-width:800px) {
@@ -214,10 +247,19 @@ h2 {
 .post.most-recent .post-info {
   margin-right: 40px;
 }
+
+.post.post.older-posts .date{
+  margin: 0;
+  color: #898989;
+}
+.post.post.older-posts .hide{
+  margin-bottom: 10px;
+}
+
 @media (max-width:800px) {
   .post.most-recent .post-info {
     padding-right: 15px;
-    padding-right: 15px;
+    padding-left: 15px;
     margin-right: 0;
   }
 }
@@ -225,7 +267,7 @@ h2 {
 
 
 .post.older-posts img{
-  height: 130px;
+  height: 160px;
 }
 
 @media (max-width:600px) {
@@ -275,7 +317,7 @@ ul.older {
   /* color: red; */
   margin-top: 0;
   margin-bottom: 20px;
-  border-bottom: 2px solid #EEE;
+  border-bottom: 1px solid #ededed;
   padding-bottom: 10px;
 }
 /* @media (max-width:800px) {
@@ -286,14 +328,25 @@ ul.older {
 .post {
   transition: background-color 0.3s;
 }
-.post:hover {
-  background-color: #f8f8f8;
+
+@media (min-width:480px) {
+  .post:hover {
+    background-color: #f8f8f8;
+  }
 }
+
+@media (max-width:480px) {
+  .post {
+    -webkit-tap-highlight-color: transparent;
+  }
+}
+
 
 .btn-show-all i {
   font-size: 14px;
   color: #4a4a4a;
   transform: scale(0.6);
+  margin-top: 30px;
 }
 .btn-show-all  {
   font-weight: 400;
@@ -327,6 +380,7 @@ footer .ending {
   width: fit-content;
 }
 
+
 .type {
   font-size: 18px;
 }
@@ -344,6 +398,19 @@ td .type {
   padding: 5px;
   color: #fff;
 }
+
+
+@media (max-width:600px) {
+  .post-info .type {
+    display: none;
+  }
+}
+
+p.type {
+  margin: 5px 0;
+  /* padding: 0; */
+}
+
 p {
   line-height: 1.4;
 }
@@ -357,6 +424,7 @@ p {
 
 .about-page h1 {
   margin-bottom: 0px;
+
 }
 .inside-post.container {
   padding-bottom: 40px;
@@ -413,6 +481,7 @@ html {
 
 .container.inside-post .hide {
   display: none;
+  line-height: 1.4;
 }
 p {
   max-width: 50ch;
@@ -427,6 +496,11 @@ p {
 .in-post-link:hover i {
   color: #6671d4;
 }
+
+
+
+
+
 
 
 
@@ -483,4 +557,40 @@ tbody tr:last-of-type {
 
 .list ul {
   padding-right: 0;
+}
+
+.contact i,
+.logo i {
+  color: #333867;
+  font-size: 30px;
+}
+.contact i {
+  font-size: 34px;
+}
+
+@media (max-width:480px) {
+  .contact i,
+  .logo i {
+  font-size: 28px;
+  }
+  .contact i {
+    font-size: 32px;
+  }
+}
+
+nav {
+  border-bottom: 1px solid #ededed;
+}
+
+/* -webkit-tap-highlight-color: transparent; */
+
+h1 a,
+h2 a,
+h3 a {
+  color: rgb(64,64,64)
+}
+h1,
+h2,
+h3 {
+  color: rgb(64,64,64)
 }
