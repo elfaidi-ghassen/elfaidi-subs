@@ -23,7 +23,7 @@ layout: home
   <ul class="older ">
     <h2>
       <i class="fa-solid fa-clock-rotate-left"></i>
-      الأقدم
+      أخرى
     </h2>
     {% for post in site.posts offset:1 limit:2 %}
     <li class="post older-posts " style="cursor: pointer" onclick="window.location='{{ post.url | relative_url }}'">
