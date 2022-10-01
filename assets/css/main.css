@@ -71,6 +71,11 @@ header .heading {
   user-select: none;
   cursor: pointer;
 }
+@media (max-width:480px) {
+  header .heading, .logo, .contact {
+    -webkit-tap-highlight-color: transparent;
+  }
+}
 
 
 @media (max-width:480px) {
@@ -440,8 +445,7 @@ p {
   margin-bottom: 30px;
   color: #4a4a4a;
 }
-.inside-post.container img,
-iframe {
+.inside-post.container img {
   width: 600px;
   max-width: 100%;
 }
@@ -593,4 +597,43 @@ h1,
 h2,
 h3 {
   color: rgb(64,64,64)
+}
+
+.in-post-info {
+  list-style: none;
+  padding: 0;
+}
+
+.filter-input {
+  width: 60%;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+  margin-top: 30px;
+  border: none;
+  border-bottom: 4px solid #6671d4;
+  outline: none;
+  padding: 10px;
+  height: 40px;
+}
+
+@media (max-width:480px) {
+  .filter-input {
+    margin-top: 20px;
+    width: 80%;
+  }
+}
+
+figure {
+  padding: 0;
+  margin-left: 0;
+  margin-right: 0;
+  width: fit-content;
+}
+figcaption {
+  text-align: center;
+  color: #595959;
+  width: 100%;
+
+
 }
