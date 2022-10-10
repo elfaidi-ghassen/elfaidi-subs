@@ -1,13 +1,13 @@
 <nav class="container">
   <ul>
     <a href={{ "/index.html" | relative_url }}>
-      <li {% if page.url == "/" %}class="active"{% endif %}>الأحدث</li>
+      <li data-nav-name="الأحدث" {% if page.url == "/" %}class="active"{% endif %}>الأحدث</li>
     </a>
     <a href={{ "subs-list.html" | relative_url }}>
-      <li {% if page.url == "/subs-list.html" %}class="active"{% endif %}>الأرشيف</li>
+      <li data-nav-name="الأرشيف" {% if page.url == "/subs-list.html" %}class="active"{% endif %}>الأرشيف</li>
     </a>
     <a href={{ "about.html" | relative_url }}>
-      <li {% if page.url == "/about.html" %}class="active"{% endif %}>عن الموقع</li>
+      <li data-nav-name="عن الموقع" {% if page.url == "/about.html" %}class="active"{% endif %}>عن الموقع</li>
     </a>
   </ul>
 </nav>
