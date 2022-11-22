@@ -161,9 +161,7 @@ nav ul {
   nav ul {
     justify-content: right;
   }
-  nav ul li:first-child {
-    margin-right: -15px;
-  }
+
   nav ul li:first-child {
     padding: 10px 15px;
   }
