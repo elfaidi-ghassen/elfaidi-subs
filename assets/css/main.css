@@ -163,7 +163,7 @@ nav ul {
   }
 
   nav ul li:first-child {
-    padding: 10px 15px;
+    padding: 10px 5px;
   }
 }
 
@@ -635,7 +635,9 @@ tbody tr:last-of-type {
   }
 }
 
-
+nav {
+  border-bottom: 1px solid #ededed;
+}
 @media (min-width:480px) {
   nav {
     border-bottom: 1px solid #ededed;
