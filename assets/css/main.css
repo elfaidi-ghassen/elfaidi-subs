@@ -247,8 +247,8 @@ h2 {
 }
 
 @media (max-width:480px) {
-  .date,
-  .thead-date {
+  .list-table .date,
+  .list-table .thead-date {
     display: none;
   }
 }
