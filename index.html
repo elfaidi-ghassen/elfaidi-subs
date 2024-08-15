@@ -8,8 +8,8 @@ permalink: /home/
 <div class="post most-recent container"
   onclick="window.location='{{ post.url | relative_url }}'">
   <a href="{{ post.url | relative_url }}">
-    <div class="post-img" style="background-image: url('/elfaidi-subs{{ post.image }}');">
-      <img src="/elfaidi-subs{{ post.image }}" alt="" />
+    <div class="post-img" style="background-image: url('/elfaidi-subs/{{ post.image }}');">
+      <img src="/elfaidi-subs/{{ post.image }}" alt="" />
     </div>
   </a>
 
@@ -30,7 +30,7 @@ permalink: /home/
     <li class="post older-posts " style="cursor: pointer" onclick="window.location='{{ post.url | relative_url }}'">
       <div class="post-img">
         <a href={{ post.url | relative_url }}>
-          <img src="/elfaidi-subs{{ post.image }}" alt="" />
+          <img src="/elfaidi-subs/{{ post.image }}" alt="" />
         </a>
       </div>
 
